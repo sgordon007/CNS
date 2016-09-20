@@ -26,7 +26,8 @@ Recommend: Run through the integrated analysis by setting performALLMAPSAlt = 1,
 
 
 ##Using CNS Analysis (workwithMAF and manipulateFilesTest):
-1. 
+1.  workWithMAF.py
+2.  manipulateFilesTest.py
   
   
   
