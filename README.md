@@ -40,7 +40,8 @@ f. the manipulateFilesTest.py script which is called by  workWithMAF.py if prese
 4. export PYTHONPATH=/global/dna/projectdirs/plant/pangenomics/python_modules:$PYTHONPATH
 5. module load bedtools/2.25.0
 6. change directory back to working directory and run workWithMAF.py: python ./workWithMAF.py on gpint
-
+7. change directory to CS dir
+8. run python pythonPhylip.py in CS dir (it calls Fasta2Phylip.pl to convert format to Phylip format)
  
 
 manipulateFilesTest.py concatenates files for the genome-wide analysis that Adam described to you which can be analyzed for trees.  It also calculates the ratios of subgenome conserved CS as a fraction of all CS for old and new CS.
