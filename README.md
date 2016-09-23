@@ -37,6 +37,7 @@ e. configCNSAnalysis.txt file
 f. the manipulateFilesTest.py script which is called by  workWithMAF.py if present in the working dir.
 2.  make a CS directory within the working dir (modify joshua's makeFolders.sh to use mkdir -p to make CS dir and subdirs when run from working dir)
 3. copy makeFolders.sh into that CS dir and run to create subdirs
+### run code
 4. export PYTHONPATH=/global/dna/projectdirs/plant/pangenomics/python_modules:$PYTHONPATH
 5. module load bedtools/2.25.0
 6. change directory back to working directory and run workWithMAF.py: python ./workWithMAF.py on gpint
@@ -47,6 +48,7 @@ f. the manipulateFilesTest.py script which is called by  workWithMAF.py if prese
 9. module load PhyML/3.1
 10. python ./pythonRunPhyML.py in CS dir
 ( this one takes the Phylip formated files and runs PhyML)
+### visualize
 11. Can visualize these trees using FigTree.  Download the tree and use figtree on mac.
 
 
