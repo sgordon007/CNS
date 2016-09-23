@@ -40,22 +40,16 @@ f. the manipulateFilesTest.py script which is called by  workWithMAF.py if prese
 4. export PYTHONPATH=/global/dna/projectdirs/plant/pangenomics/python_modules:$PYTHONPATH
 5. module load bedtools/2.25.0
 6. change directory back to working directory and run workWithMAF.py: python ./workWithMAF.py on gpint
+(manipulateFilesTest.py concatenates files for the genome-wide analysis that Adam described to you which can be analyzed for trees.  It also calculates the ratios of subgenome conserved CS as a fraction of all CS for old and new CS.)
 7. change directory to CS dir
-8. run python pythonPhylip.py in CS dir (it calls Fasta2Phylip.pl to convert format to Phylip format)
- 
+8. python ./pythonPhylip.py in CS dir (it calls Fasta2Phylip.pl to convert fasta format to Phylip format)
+    can check lengths of fasta seqs with fasta_size.pl ( this gives sequence lengths that I know we need as Fasta2Phylip.pl has some bug or PhyML doesn't like the Phylip format written above, but how do we utilize this?
+9. module load PhyML/3.1
+10. python ./pythonRunPhyML.py in CS dir
+( this one takes the Phylip formated files and runs PhyML)
+11. Can visualize these trees using FigTree.  Download the tree and use figtree on mac.
 
-manipulateFilesTest.py concatenates files for the genome-wide analysis that Adam described to you which can be analyzed for trees.  It also calculates the ratios of subgenome conserved CS as a fraction of all CS for old and new CS.
 
-6.  pythonPhylip.py (OK, I undertand this one, it just calls Fasta2Phylip.pl to convert format to Phylip format)
 
-where does this one go? :   fasta_size.pl ( this gives sequence lengths that I know we need as Fasta2Phylip.pl has some bug or PhyML doesn't like the Phylip format written above, but how do we utilize this?
-
-7.  pythonRunPhyML.py ( this one takes the Phylip formated files and runs PhyML)
-
-fasta2phyAll.sh ( this script looks broken to me. Where does it fit? )
   
   
-  
-###What to do after CNS Analysis Completes:
-1. Convert fasta files to phylip files and run them under PhyML to generate trees. Can visualize these trees using FigTree.
-2. If using NERSC, module load PhyML. ^^^
