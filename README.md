@@ -35,7 +35,7 @@ c. all query and target *.bed; target t.*.gff3, t.*.sort2, t.*CDS.bed3, t.*Genes
 d. the workWithMAF.py file
 e. configCNSAnalysis.txt file
 f. the manipulateFilesTest.py script which is called by  workWithMAF.py if present in the working dir.
-2.  make a directory one level up called "CS" (perhaps the CS dir should be within the working dir) mkdir -p 
+2.  make a CS directory within the working dir (modify joshua's makeFolders.sh to use mkdir -p to make CS dir and subdirs when run from working dir)
 3. copy makeFolders.sh into that CS dir and run to create subdirs
 4. export PYTHONPATH=/global/dna/projectdirs/plant/pangenomics/python_modules:$PYTHONPATH
 5. module load bedtools/2.25.0
