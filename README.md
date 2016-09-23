@@ -35,7 +35,7 @@ c. all query and target *.bed; target t.*.gff3, t.*.sort2, t.*CDS.bed3, t.*Genes
 d. the workWithMAF.py file
 e. configCNSAnalysis.txt file
 f. the manipulateFilesTest.py script which is called by  workWithMAF.py if present in the working dir.
-2.  make a directory one level up called "CS"
+2.  make a directory one level up called "CS" (perhaps the CS dir should be within the working dir)
 3. copy makeFolders.sh into that CS dir and run to create subdirs
 4. change directory back to working directory and run workWithMAF.py: python ./workWithMAF.py on gpint
 
