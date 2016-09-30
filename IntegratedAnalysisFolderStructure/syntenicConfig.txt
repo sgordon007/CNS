@@ -1,9 +1,9 @@
 NameAnalysis = N
 Loci_Threshold = 10
-pathPythonModules = /global/u2/j/jlevy/python_modules
-pathUnOut = /Users/jlevy/Documents/Joshua_Research_JGI/Joshua_Levy_Research_Outputs/DNA_Segment_Extraction/UnOutFiles/
-pathSort = /Users/jlevy/Documents/Joshua_Research_JGI/Joshua_Levy_Research_Outputs/DNA_Segment_Extraction/SortFiles/
-N Test Analysis path = /Users/jlevy/Documents/Joshua_Research_JGI/Joshua_Levy_Research_Outputs/DNA_Segment_Extraction/FastaFileOutputsNAnalysis/
+pathPythonModules = /global/dna/projectdirs/plant/pangenomics/python_modules
+pathUnOut = /global/projectb/scratch/sgordon/joshua/sean_hybridum_final_synteny/UnOutFiles/
+pathSort = /global/projectb/scratch/sgordon/joshua/sean_hybridum_final_synteny/SortFiles/
+N Test Analysis path = /global/projectb/scratch/sgordon/joshua/sean_hybridum_final_synteny/FastaFileOutputsDAnalysis/
 PAC4GC.523-PAC4GC.524_5.unout   q.PAC4GC.523.sort2   q.PAC4GC.524.sort2
 PAC4GC.523-PAC2_0.308_5.unout   q.PAC4GC.523.sort2   t.PAC2_0.308.sort2
 PAC4GC.523-PAC2_0.312_5.unout   q.PAC4GC.523.sort2   t.PAC2_0.312.sort2
@@ -12,7 +12,7 @@ PAC4GC.523-PAC2_0.323_5.unout   q.PAC4GC.523.sort2   t.PAC2_0.323.sort2
 PAC4GC.523-PAC2_0.314_5.unout   q.PAC4GC.523.sort2   t.PAC2_0.314.sort2
 PAC4GC.523-PAC2_0.316_5.unout   q.PAC4GC.523.sort2   t.PAC2_0.316.sort2
 Stop
-K Test Analysis path = /Users/jlevy/Documents/Joshua_Research_JGI/Joshua_Levy_Research_Outputs/DNA_Segment_Extraction/FastaFileOutputsKAnalysis/
+K Test Analysis path = /Users/jlevy/Documents/Joshua_Research_JGI/Joshua_Levy_Research_Outputs/DNA_Segment_Extraction/FastaFileOutputsSAnalysis/
 PAC4GC.524-PAC4GC.523_5.unout   q.PAC4GC.524.sort2   q.PAC4GC.523.sort2
 PAC4GC.524-PAC2_0.308_5.unout   q.PAC4GC.524.sort2   t.PAC2_0.308.sort2
 PAC4GC.524-PAC2_0.312_5.unout   q.PAC4GC.524.sort2   t.PAC2_0.312.sort2
@@ -23,7 +23,7 @@ PAC4GC.524-PAC2_0.316_5.unout   q.PAC4GC.524.sort2   t.PAC2_0.316.sort2
 Stop
 
 Fasta
-genomePath = /Users/jlevy/Documents/Joshua_Research_JGI/Joshua_Levy_Research_Outputs/DNA_Segment_Extraction/Genomes/
+genomePath = /global/projectb/scratch/sgordon/joshua/sean_hybridum_final_synteny/Genomes/
 listOfGenomeFiles:
 Phallii_308_v2.0.softmasked.fa
 Pvirgatum_383_v3.0.softmasked.fa
@@ -33,7 +33,6 @@ Osativa_323_v7.0.softmasked.fa
 Sbicolor_313_v3.0.softmasked.fa
 Bstacei_316_v1.0.softmasked.fa
 Stop
-
 
 
 Misc Info

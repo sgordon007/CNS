@@ -1,9 +1,35 @@
 # Joshua-Levy-Synteny-Analysis
-###Integrated Analysis of Synteny (Multiple Synteny Comparison for Multiple Alignment, Circos Outputs, Allmaps Genome Reconstructions), Find Ghost Genes, Identify and Analyze CNS Elements from Multiple Alignment Files and More!
+### Analysis of Synteny (Multiple Synteny Comparison for Multiple Alignment, Circos Outputs, Genome Reconstruction, Identify and Analyze CNS Elements from Multiple Alignment Files
+
 
 
 ##Using Integrated Analysis:
-1. 
+
+## Setup:
+##SyntenyFinal.py : generates Fasta files that essentially stitch together pairwise comparisons of syntenic sequences across multiple species/comparisons.
+Input:
+1. synteny files: header specifies start/end genes for a syntenic sequence (eg. 3012974 – 3013249) for a particular chromosome of a species. start and end genes will be matched up with geneIDs/names to identify exact coordinates and orientation of synteny between two species
+2. .sort2 files- The gff files MUST be parsed using gff2sort to generate .sort2 files. This is a simplified version of the .gff file and is used for a fast and speedy final analysis. Each line is organized by 
+geneID   ChromosomeName   startCoordinate   endCoordinate of gene. The genes are referenced in the unout file and found in the sort2 files during the analysis. 
+3. .fa files- These are the files that contain the entire sequence of the genome for particular species. These files will be turned into python Fasta objects during the analysis and their syntenic sequences will be exported into another fasta file
+4.  syntenicConfig.txt : File used to set up entire analysis. If you wish to have a different file name, please edit it within the python script for syntenyFinal.
+
+## Run the scripts:
+1. Setup main folder where analysis will be performed
+2. make subdirs and copy over files:
+FastaFileOutputsAnalysis  GFFFiles  Genomes  SortFiles	SyntenyFinal.py  UnOutFiles  syntenicConfig.txt
+3. Edit the paths listed to reflect your analysis. Edit pathPythonModule (the path where to find modules you have installed so it can run the right libraries), pathUnOut, pathSort, XXX Test Analysis path, genomePath… Also, change name from N Test Analysis to XXX(your analysisname) Test Analysis and replace N with XXX for analysisName= XXX. XXX will also be input argument to the main function in syntenyFinal. You can erase all other info from any other analysis (N or K in this case)…
+4. 1.	Drag .fa genome files to the genomes folder and add names of genome .fa files to syntenicConfig.txt (the .fai files in the picture will be generated from the analysis Fasta structure). Species number (eg. 383 should be surrounded by two ‘_’ for file name)
+Use softmasked genome assemblies
+5. 1.	Drag/copy gff2sort.py and all .gff files to folder GFFfiles and rename by the following conventions:
+a.	Rename file with either ‘q.’ or ‘t.’ followed by ‘PAC4GC.’ Or ‘PAC2_0.’ Followed by species name/number (eg. 383, needs to correspond to species number on .fa) followed by .gff or .gff3.
+b.	Example: t.PAC2_0.383.gff3 corresponds to Pvirgatum_383_v3.0.softmasked.fa
+524 and 523 are both special cases… Try to follow usual naming convention
+6. Edit gff2sort.py by changing the list variable gffFiles. You will erase the contents of the variable gffFiles and type in the name of the gff files you need to convert to sort2 files. Save and run this script from the terminal. .sort2 files will be created, and copy all of them over to the SortFiles folder.
+7. Copy all unout pairwise Synteny comparisons files to the UnOutFiles folder.
+
+OtherFiles/AdditionalAnalysisScripts/gff2sort.py
+
 
 
 Note: Delete Sort Files after every analysis
