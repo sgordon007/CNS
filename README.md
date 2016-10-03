@@ -9,9 +9,12 @@
 ##SyntenyFinal.py : generates Fasta files that essentially stitch together pairwise comparisons of syntenic sequences across multiple species/comparisons.
 Input:
 1. synteny files: header specifies start/end genes for a syntenic sequence (eg. 3012974 – 3013249) for a particular chromosome of a species. start and end genes will be matched up with geneIDs/names to identify exact coordinates and orientation of synteny between two species
+
 2. .sort2 files- The gff files MUST be parsed using gff2sort to generate .sort2 files. This is a simplified version of the .gff file and is used for a fast and speedy final analysis. Each line is organized by 
 geneID   ChromosomeName   startCoordinate   endCoordinate of gene. The genes are referenced in the unout file and found in the sort2 files during the analysis. 
+
 3. .fa files- These are the files that contain the entire sequence of the genome for particular species. These files will be turned into python Fasta objects during the analysis and their syntenic sequences will be exported into another fasta file
+
 4.  syntenicConfig.txt : File used to set up entire analysis. If you wish to have a different file name, please edit it within the python script for syntenyFinal.
 
 ## Run the scripts:
