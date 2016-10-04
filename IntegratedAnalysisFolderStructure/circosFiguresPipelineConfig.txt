@@ -7,7 +7,6 @@ Bdistachyon_314_v3.0.softmasked.fa.fai
 Bstacei_316_v1.0.softmasked.fa.fai
 Osativa_323_v7.0.softmasked.fa.fai
 Pvirgatum_383_v3.0.softmasked.fa.fai
-Pvirgatum_524_v3.0.softmasked.fa
 Stop
 
 BedFiles
