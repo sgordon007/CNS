@@ -1,46 +1,34 @@
 # Circos Figures Config File Joshua Levy
 faiFiles
 Phallii_308_v2.0.softmasked.fa.fai
-
-Athaliana_167_TAIR9.fa.fai
-Gmax_275_v2.0.softmasked.fa.fai
-Pvirgatum_383_v3.0.softmasked.fa.fai
-Sviridis_311_v1.0.softmasked.fa.fai
-Bdistachyon_283_assembly_v2.0.softmasked.fa.fai
-Osativa_323_v7.0.softmasked.fa.fai
-Sbicolor_313_v3.0.softmasked.fa.fai
-Bstacei_316_v1.0.softmasked.fa.fai
-
 Sitalica_312_v2.softmasked.fa.fai
-mtruncatula_285_mt4.0.softmasked.fa.fai
+Sbicolor_313_v3.0.softmasked.fa.fai
+Bdistachyon_314_v3.0.softmasked.fa.fai
+Bstacei_316_v1.0.softmasked.fa.fai
+Osativa_323_v7.0.softmasked.fa.fai
+Pvirgatum_383_v3.0.softmasked.fa.fai
+Pvirgatum_524_v3.0.softmasked.fa
 Stop
+
 BedFiles
-PAC2_0.283-PAC2_0.167_5.bed
-PAC2_0.283-PAC2_0.312_5.bed
-PAC2_0.283-PAC2_0.323_5.bed
-PAC2_0.283-PAC2_0.275_5.bed
-PAC2_0.283-PAC2_0.308_5.bed
-PAC2_0.283-PAC2_0.313_5.bed
-PAC2_0.283-PAC2_0.383_5.bed
-PAC2_0.283-PAC2_0.285_5.bed
-PAC2_0.283-PAC2_0.311_5.bed
-PAC2_0.283-PAC2_0.316_5.bed
-
 PAC4GC.523-PAC2_0.308_5.bed
-PAC4GC.523-PAC2_0.316_5.bed  PAC4GC.524-PAC2_0.308_5.bed  PAC4GC.524-PAC2_0.316_5.bed
-PAC4GC.523-PAC2_0.312_5.bed  PAC4GC.523-PAC2_0.323_5.bed  PAC4GC.524-PAC2_0.312_5.bed  PAC4GC.524-PAC2_0.323_5.bed
-PAC4GC.523-PAC2_0.313_5.bed  PAC4GC.523-PAC2_0.383_5.bed  PAC4GC.524-PAC2_0.313_5.bed  PAC4GC.524-PAC2_0.383_5.bed
-PAC4GC.523-PAC2_0.314_5.bed  PAC4GC.523-PAC4GC.524_5.bed  PAC4GC.524-PAC2_0.314_5.bed  PAC4GC.524-PAC4GC.523_5.bed
-
-
+PAC4GC.523-PAC2_0.312_5.bed
+PAC4GC.523-PAC2_0.313_5.bed
+PAC4GC.523-PAC2_0.314_5.bed
+PAC4GC.523-PAC2_0.316_5.bed
+PAC4GC.523-PAC2_0.323_5.bed
+PAC4GC.523-PAC2_0.383_5.bed
+PAC4GC.523-PAC4GC.524_5.bed
 Stop
-faiFilePath = /global/projectb/scratch/sgordon/joshua/DNA_Segment_Extraction/Genomes/
-karyotypesFilesPath = /Users/jlevy/Documents/Joshua_Research_JGI/Joshua_Levy_Research_Outputs/DNA_Segment_Extraction/BdistachyonAnalysis/CircosInputs/Data/Karyotypes/
-BedInputPath = /global/projectb/scratch/sgordon/joshua/DNA_Segment_Extraction/BdFiles/
-circosConfigFilesPath = /Users/jlevy/Documents/Joshua_Research_JGI/Joshua_Levy_Research_Outputs/DNA_Segment_Extraction/BdistachyonAnalysis/CircosInputs/ConfigFiles/
-LinkPath = /Users/jlevy/Documents/Joshua_Research_JGI/Joshua_Levy_Research_Outputs/DNA_Segment_Extraction/BdistachyonAnalysis/CircosInputs/Data/Links/
-circosOutPath = /Users/jlevy/Documents/Joshua_Research_JGI/Joshua_Levy_Research_Outputs/DNA_Segment_Extraction/BdistachyonAnalysis/CircosOutputs
+
+faiFilePath = /global/projectb/scratch/sgordon/joshua/sean_hybridum_final_synteny/Genomes/
+karyotypesFilesPath = /global/projectb/scratch/sgordon/joshua/sean_hybridum_final_synteny/CircosInputs/Data/Karyotypes/
+BedInputPath = /global/projectb/scratch/sgordon/joshua/sean_hybridum_final_synteny/BdFiles/
+circosConfigFilesPath = /global/projectb/scratch/sgordon/joshua/sean_hybridum_final_synteny/CircosInputs/ConfigFiles/
+LinkPath = /global/projectb/scratch/sgordon/joshua/sean_hybridum_final_synteny/CircosInputs/Data/Links/
+circosOutPath = /global/projectb/scratch/sgordon/joshua/sean_hybridum_final_synteny/CircosOutputs
 pathPythonModules = /global/dna/projectdirs/plant/pangenomics/python_modules
 BPsThreshold = 100000
-Omissions # 314 and 296
-PAC2_0.283-PAC2_0.314_5.bed
+
+#Omissions # 314 and 296
+#PAC2_0.283-PAC2_0.314_5.bed
