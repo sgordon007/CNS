@@ -7,7 +7,6 @@ Sviridis_311_v1.0.softmasked.fa.fai
 Bdistachyon_283_assembly_v2.0.softmasked.fa.fai
 Osativa_323_v7.0.softmasked.fa.fai
 Sbicolor_313_v3.0.softmasked.fa.fai
-Taestivum_296_v2.softmasked.fa.fai
 Bstacei_316_v1.0.softmasked.fa.fai
 Phallii_308_v2.0.softmasked.fa.fai
 Sitalica_312_v2.softmasked.fa.fai
@@ -19,7 +18,6 @@ PAC2_0.283-PAC2_0.312_5.bed
 PAC2_0.283-PAC2_0.323_5.bed
 PAC2_0.283-PAC2_0.275_5.bed
 PAC2_0.283-PAC2_0.308_5.bed
-PAC2_0.283-PAC2_0.296_5.bed
 PAC2_0.283-PAC2_0.313_5.bed
 PAC2_0.283-PAC2_0.383_5.bed
 PAC2_0.283-PAC2_0.285_5.bed
