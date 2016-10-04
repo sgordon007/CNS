@@ -1,28 +1,26 @@
 NameAnalysis = N
-Loci_Threshold = 10
+Loci_Threshold = 4
 pathPythonModules = /global/dna/projectdirs/plant/pangenomics/python_modules
 pathUnOut = /global/projectb/scratch/sgordon/joshua/sean_hybridum_final_synteny/UnOutFiles/
 pathSort = /global/projectb/scratch/sgordon/joshua/sean_hybridum_final_synteny/SortFiles/
 N Test Analysis path = /global/projectb/scratch/sgordon/joshua/sean_hybridum_final_synteny/FastaFileOutputsDAnalysis/
-PAC4GC.001-PAC2_0.308_5.unout   q.PAC4GC.001.sort2   t.PAC2_0.308.sort2
-PAC4GC.001-PAC2_0.312_5.unout   q.PAC4GC.001.sort2   t.PAC2_0.312.sort2
-PAC4GC.001-PAC2_0.313_5.unout   q.PAC4GC.001.sort2   t.PAC2_0.313.sort2
-PAC4GC.001-PAC2_0.323_5.unout   q.PAC4GC.001.sort2   t.PAC2_0.323.sort2
 PAC4GC.001-PAC2_0.314_5.unout   q.PAC4GC.001.sort2   t.PAC2_0.314.sort2
 PAC4GC.001-PAC2_0.316_5.unout   q.PAC4GC.001.sort2   t.PAC2_0.316.sort2
+PAC4GC.001-PAC2_0.313_5.unout   q.PAC4GC.001.sort2   t.PAC2_0.313.sort2
+PAC4GC.001-PAC2_0.323_5.unout   q.PAC4GC.001.sort2   t.PAC2_0.323.sort2
+PAC4GC.001-PAC2_0.312_5.unout   q.PAC4GC.001.sort2   t.PAC2_0.312.sort2
+PAC4GC.001-PAC2_0.308_5.unout   q.PAC4GC.001.sort2   t.PAC2_0.308.sort2
 PAC4GC.001-PAC2_0.383_5.unout   q.PAC4GC.001.sort2   t.PAC2_0.383.sort2
 Stop
-
 K Test Analysis path = /global/projectb/scratch/sgordon/joshua/sean_hybridum_final_synteny/FastaFileOutputsSAnalysis/
-PAC4GC.002-PAC2_0.308_5.unout   q.PAC4GC.002.sort2   t.PAC2_0.308.sort2
-PAC4GC.002-PAC2_0.312_5.unout   q.PAC4GC.002.sort2   t.PAC2_0.312.sort2
-PAC4GC.002-PAC2_0.313_5.unout   q.PAC4GC.002.sort2   t.PAC2_0.313.sort2
-PAC4GC.002-PAC2_0.323_5.unout   q.PAC4GC.002.sort2   t.PAC2_0.323.sort2
 PAC4GC.002-PAC2_0.314_5.unout   q.PAC4GC.002.sort2   t.PAC2_0.314.sort2
 PAC4GC.002-PAC2_0.316_5.unout   q.PAC4GC.002.sort2   t.PAC2_0.316.sort2
+PAC4GC.002-PAC2_0.313_5.unout   q.PAC4GC.002.sort2   t.PAC2_0.313.sort2
+PAC4GC.002-PAC2_0.323_5.unout   q.PAC4GC.002.sort2   t.PAC2_0.323.sort2
+PAC4GC.002-PAC2_0.312_5.unout   q.PAC4GC.002.sort2   t.PAC2_0.312.sort2
+PAC4GC.002-PAC2_0.308_5.unout   q.PAC4GC.002.sort2   t.PAC2_0.308.sort2
 PAC4GC.002-PAC2_0.383_5.unout   q.PAC4GC.002.sort2   t.PAC2_0.383.sort2
 Stop
-
 Fasta
 genomePath = /global/projectb/scratch/sgordon/joshua/sean_hybridum_final_synteny/Genomes/
 listOfGenomeFiles:
