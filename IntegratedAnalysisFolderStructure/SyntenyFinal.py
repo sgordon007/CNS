@@ -37,15 +37,18 @@ def generateFastaObjectStructure(listOfGenomeFiles,genomePath):
         #    fastaObjectStructure[genomeNameFind[0]][1]+=[lineList[0]]
     return fastaObjectStructure
 
+
+"""
 # irrelevant code that was originally used to try to stitch together syntenic sequences
 def isbetween(start_coord_query,end_coord_query,start_coord_higherlvl,end_coord_higherlvl):
-    """Compare function for if the query start or end coordinate is between the higher level start/end coordinates"""
+    #Compare function for if the query start or end coordinate is between the higher level start/end coordinates
     if start_coord_higherlvl <= start_coord_query <= end_coord_higherlvl or \
                             start_coord_higherlvl <= end_coord_query <= end_coord_higherlvl or \
                             start_coord_query <= start_coord_higherlvl <= end_coord_query:
         return True
     else:
         return False
+"""
 
 
 def pairComparisonSynteny(syntenicInputFiles,pathUnOut,pathSort,Loci_Threshold):
@@ -67,10 +70,10 @@ def pairComparisonSynteny(syntenicInputFiles,pathUnOut,pathSort,Loci_Threshold):
     # Find species Names (numbers) #FIXME
     speciesName = [syntenicInputFiles[1].split('.')[-2],syntenicInputFiles[2].split('.')[-2]]
 
-    # unused code below
+    """
+    # unused code
     # read the line that has the proper header to be parsed
     #reading = 1
-    """
     lines=[]
     for line in syntenyFile:
         if '[' in line:
@@ -171,6 +174,7 @@ def pairComparisonSynteny(syntenicInputFiles,pathUnOut,pathSort,Loci_Threshold):
 
     syntenyFile.close()
 
+    """
     # obsolete code, dealt with gene ordering and titling of species/chromosome names, no longer to be used
     def removePlusMinus(speciesChromosomeName):
         # GET RID OF PLUS OR MINUS... FOR NOW keeping it!!!
@@ -179,11 +183,13 @@ def pairComparisonSynteny(syntenicInputFiles,pathUnOut,pathSort,Loci_Threshold):
         if 'Minus' in speciesChromosomeName:
             speciesChromosomeName = speciesChromosomeName[:speciesChromosomeName.find('Minus')-1]
         return speciesChromosomeName
+    """
 
     # import the sorted file to find start and end locations/coordinates of each gene in syntenic sequence
     sortFiles = [syntenicInputFiles[1],syntenicInputFiles[2]]
     # open species file to find positions in the genome where syntenic sequence is located in between
     sortFileOpen = [open(pathSort+sortFiles[0], 'r'), open(pathSort+sortFiles[1], 'r')]
+
     """
     #test code
     testOut= open('testout.txt','w')
@@ -194,6 +200,7 @@ def pairComparisonSynteny(syntenicInputFiles,pathUnOut,pathSort,Loci_Threshold):
     """
     # recreate structure here!!!!! START HERE!!!
     # more parsing, generate syntenies from each line
+
 
     def checkForGene(geneLine,speciesNumber):
         """Checks particular line of sort file and searches through syntenic sequence list structure and outputs start
@@ -220,23 +227,7 @@ def pairComparisonSynteny(syntenicInputFiles,pathUnOut,pathSort,Loci_Threshold):
                     # replace start/end gene with corresponding start/end coordinate
                     syntenicSequences[i][speciesNumber][k] = int(geneLine.split()[k+1])
 
-                # removed code, additional checks on gene ordering...
-                """   if type(syntenicSequences[i][speciesNumber][1]) == \
-                            type(syntenicSequences[i][speciesNumber][2]) and \
-                                    syntenicSequences[i][speciesNumber][2] < \
-                                    syntenicSequences[i][speciesNumber][1]:
-                        # check if end coordinate less than start coord (find out why??)
-                """
-
-        # unused code
-        #geneCoordInfos += [(i, k, geneLine.split()[k+1])]
-        #if geneCoordInfos == []:
-        #    return [('NaN', 'NaN', 'NaN')]
-        #else:
-        #    return geneCoordInfos
-
-
-# for species 1 and 2
+    # for species 1 and 2
     for speciesNumber in range(2):
         # check each line in sort file and..
         for line in sortFileOpen[speciesNumber]:
@@ -246,76 +237,7 @@ def pairComparisonSynteny(syntenicInputFiles,pathUnOut,pathSort,Loci_Threshold):
                 # note: output multiple gene coords!!!!
                 checkForGene(line,speciesNumber)
 
-                #Removed code below, algorithm that did not get the job done using local variables, created global
-                # variables for ease of access to structure... some genes were found multiple times
-                #geneCoordInfos=checkForGene(line,syntenicSequences,speciesNumber)
-                """
-                for geneCoord in geneCoordInfos:
-                    if geneCoord[0] != 'NaN':
-                        syntenicSequences[geneCoord[0]][speciesNumber][geneCoord[1]]=int(geneCoord[2].strip('\n')) # use int for now
-                        if type(syntenicSequences[geneCoord[0]][speciesNumber][1]) == \
-                            type(syntenicSequences[geneCoord[0]][speciesNumber][2]) and \
-                                syntenicSequences[geneCoord[0]][speciesNumber][2] < \
-                                        syntenicSequences[geneCoord[0]][speciesNumber][1]:
-                            errorFile.write(line.split()[0]+' '+str(syntenicSequences[geneCoord[0]])+('\n')) #check if end coordinate less than start coord (find out why??)
-#Seita.4G005900.1	scaffold_4	406794	407432	213	1	U	1509211
-        #comment and read into greater detail!!!!!
-                """
 
-    # obsolete/removed method of finding start/end coordinates that required a lot of processing time and kept opening
-    # and rereading the sort2 file
-    #for syntenySequence in syntenicSequences:
-        """
-        string1list = line[line.find('[') + 1:line.find(']')].split(' ')
-        string2list = line[line.rfind('[') + 1:line.rfind(']')].split(' ')
-
-        # grabs the beginning and end genes of the syntenic sequence for each species
-        speciesgenes = [[string1list[1], string1list[3]], [string2list[1], string2list[3]]]
-
-        # grabs species+chromosome names
-        speciesChr1 = line[0:line.find('[') - 1]
-        speciesChr2 = line[line.find(':') + 2:line.rfind('[') - 1]
-        speciesChr1 = removePlusMinus(speciesChr1)
-        speciesChr2 = removePlusMinus(speciesChr2)
-        """
-        #PLEASE CHANGE THIS... WILL TAKE TOO LONG TO READ THROUGH FILES
-        # this was changed..., code below is also removed
-        """
-        j = 0
-        genePositionList = [[], []]
-        for i in range(2):
-            # for each line in the sorted file
-            for line2 in sortFileOpen[i]:
-                lineList = line2.split()
-                # determine if there is reverse sequencing in the syntenic sequence
-                if int(lineList[2]) >= int(lineList[3]):
-                    print 'Reverse sequencing found @:', line2
-                # locate the start/end gene within the sorted list of genes, add start and end coordinate info
-                if speciesgenes[i][0] == lineList[7] or speciesgenes[i][1] == lineList[7]:
-                    if speciesChr1 not in lineList[1] and speciesChr2 not in lineList[1]:
-                        print line2, speciesChr1, speciesChr2, speciesgenes #DEBUGGING!!!
-                    genePositionList[i] += [int(lineList[2]), int(lineList[3])]
-                if len(genePositionList[i])==4:
-                    # keep only start coord of first gene and end coord of last gene to capture entire sequence
-                    del genePositionList[i][1]
-                    del genePositionList[i][1]
-                    break
-            """
-            # unused code
-            # read again from the top (FOR NOW)
-            #sortFileOpen[i].seek(0)
-
-        #old structure created, code removed/unused...
-        """
-        try:
-            Syntenies+=[[(speciesChr1,genePositionList[0][0],genePositionList[0][1]),
-                        (speciesChr2,genePositionList[1][0],genePositionList[1][1])]]
-        except:
-            print (genePositionList[0][0],genePositionList[0][1],genePositionList,sortFiles,
-                    speciesgenes[1][1])
-            print speciesChr1, speciesChr2, speciesgenes
-            exit()
-        """
 
     # close sort files...
     for i in range(2):
@@ -362,7 +284,7 @@ def pairComparisonSynteny(syntenicInputFiles,pathUnOut,pathSort,Loci_Threshold):
 
 
 def syntenicStructure(): #input N or K for subgenome, will generalize later
-    """Input 'N' or 'K' for now in oder to perform a synteny analysis on either the N or K subgenome. This will compare
+    """Input 'N' or 'K' for now in order to perform a synteny analysis on either the N or K subgenome. This will compare
     the subgenome to its closest species relatives and builds a Fasta object structure and a BedTool Object structure to
     access the Fasta structure, which accesses the genomes themselves.
     Fasta files are outputted from each analysis that contain information about each merged syntenic sequence and the
@@ -381,6 +303,7 @@ def syntenicStructure(): #input N or K for subgenome, will generalize later
             # Reads the type of Analysis to be performed; modify config file. this name must match name used for output path
             if 'NameAnalysis' in line:
                 nameAnalysis = line.split()[-1].strip('\n')
+                print nameAnalysis
             if 'writeFastaOut' in line:
                 writeFastaOut = line.split()[-1].strip('\n')
             if 'pathPythonModules' in line:
@@ -552,60 +475,6 @@ def syntenicStructure(): #input N or K for subgenome, will generalize later
             count += 1 # change cound to change title of fasta out file
         errorFile.close()
 
-
-    # old code, removed, does not work!! prior attempt without bedtools
-    """
-    # first generate list of syntenic dictionaries from species A&B from the first synteny
-    # create initial synteny dictionary structure from species A & B
-    finalSyntenyStructure=[]
-
-
-    def isSyn2dict(syntenyList,eachSyntenyDictionary):
-        #Determine whether to convert syntenic sequence represented by the second tuple of a list of tuples
-        #into a dictionary object.
-        queryName=syntenyList[0][0] #Always Species A
-
-        resultName=syntenyList[1][0] # Species B, C, D, E... etc
-
-        if eachSyntenyDictionary.has_key(queryName):
-            for item in eachSyntenyDictionary[queryName]:
-                if isbetween(int(syntenyList[0][1]),int(syntenyList[0][2]), int(item[0]),int(item[1])):
-                    return True
-            return False
-
-        else:
-            return False
-
-
-    # initialize structure for final syntenies, this will combine similar syntenies across pair comparisons
-    for eachPairedComparisonSyntenies in listOfPairedComparisonSyntenies[0]:
-        # initialize the structure with the paired comparison between species A & B, paired comparison converted to dict
-        finalSyntenyStructure+=[{eachPairedComparisonSyntenies[0][0]:[(eachPairedComparisonSyntenies[0][1],
-                                                                     eachPairedComparisonSyntenies[0][2])],
-                                 eachPairedComparisonSyntenies[1][0]:[(eachPairedComparisonSyntenies[1][1],
-                                                                     eachPairedComparisonSyntenies[1][2])]}]
-
-    # let's add the other paired comparisons to the dictionary structure under the premise that we'll combine similar
-    # syntenies
-    if len(listOfPairedComparisonSyntenies) > 1: # if we are performing analysis on more than 2 species
-        for i in range(1,len(listOfPairedComparisonSyntenies)): # already initialized structure using 0th entry
-            # goes through all syntenies in particular paired comparison
-            for eachSynteny in listOfPairedComparisonSyntenies[i]:
-                # finds out if particular synteny [(species1,xi,xf),(species2,yi,yf)] can be added to dictionary for
-                # particular synteny type that combines all species into dictionary, synt dict incorporate all species
-                if isSyn2dict(eachSynteny,finalSyntenyStructure[i]):
-                    # either add onto existing dictionary/synteny type or create new key...
-                    if finalSyntenyStructure[i].has_key(eachSynteny[1][0]):
-                        finalSyntenyStructure[i][eachSynteny[1][0]].append((eachSynteny[1][1],eachSynteny[1][2]))
-                    else:
-                            finalSyntenyStructure[i][eachSynteny[1][0]]=[(eachSynteny[1][1], eachSynteny[1][2])]
-
-    # Test item here to see if dictionaries work....????
-    for item in finalSyntenyStructure:
-        if len(item)>2:
-            print item
-    a=1
-    """
 
 # run K and N subgenome analysis
 syntenicStructure()
