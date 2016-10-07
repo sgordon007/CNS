@@ -1,0 +1,35 @@
+# Circos Figures Config File Joshua Levy
+faiFiles
+Phallii_308_v2.0.softmasked.fa.fai
+Sitalica_312_v2.softmasked.fa.fai
+Sbicolor_313_v3.0.softmasked.fa.fai
+Bdistachyon_314_v3.0.softmasked.fa.fai
+Bstacei_316_v1.0.softmasked.fa.fai
+Osativa_323_v7.0.softmasked.fa.fai
+Pvirgatum_383_v3.0.softmasked.fa.fai
+BhybridumD_001_v1.0.softmasked.fa.fai
+BhybridumS_002_v1.0.softmasked.fa.fai
+Stop
+
+BedFiles
+PAC4GC.002-PAC2_0.308_5.bed
+PAC4GC.002-PAC2_0.312_5.bed
+PAC4GC.002-PAC2_0.313_5.bed
+PAC4GC.002-PAC2_0.314_5.bed
+PAC4GC.002-PAC2_0.316_5.bed
+PAC4GC.002-PAC2_0.323_5.bed
+PAC4GC.002-PAC2_0.383_5.bed
+PAC4GC.002-PAC4GC.001_5.bed
+Stop
+
+faiFilePath = /global/projectb/scratch/sgordon/joshua/sean_hybridum_final_synteny/Genomes/
+karyotypesFilesPath = /global/projectb/scratch/sgordon/joshua/sean_hybridum_final_synteny/CircosInputs/Data/Karyotypes/
+BedInputPath = /global/projectb/scratch/sgordon/joshua/sean_hybridum_final_synteny/BdFiles/
+circosConfigFilesPath = /global/projectb/scratch/sgordon/joshua/sean_hybridum_final_synteny/CircosInputs/ConfigFiles/
+LinkPath = /global/projectb/scratch/sgordon/joshua/sean_hybridum_final_synteny/CircosInputs/Data/Links/
+circosOutPath = /global/projectb/scratch/sgordon/joshua/sean_hybridum_final_synteny/CircosOutputs
+pathPythonModules = /global/dna/projectdirs/plant/pangenomics/python_modules
+BPsThreshold = 100000
+
+#Omissions # 314 and 296
+#PAC2_0.283-PAC2_0.314_5.bed
