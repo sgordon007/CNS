@@ -387,7 +387,7 @@ def syntenicStructure(): #input N or K for subgenome, will generalize later
         # one line should look like:
         # 523-Chr09N	118260675	118632318	308-Chr07-33574614-33759677|308-Chr09-1325484-1436481| ...etc
         # SpeciesA-Chrom xi xf     SpeciesB-Chr-xi-xf|SpeciesC-Chr-xi-xf|SpeciesC#2-Chr-xi-xf...etc
-        finalSyntenyStructureBed = finalSyntenyStructureBed.sort().merge(o='distinct',c=4,delim='|',d=100000) ### Sean commented this part! Copied direct below but without merge
+        finalSyntenyStructureBed = finalSyntenyStructureBed.sort().merge(o='distinct',c=4,delim='|',d=30000) ### Sean commented this part! Copied direct below but without merge
         finalSyntenyStructureBed = finalSyntenyStructureBed.sort()
 
         #output bed object to file
