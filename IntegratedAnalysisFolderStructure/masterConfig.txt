@@ -1,36 +1,36 @@
 # will already perform syntenyAnalysis; type 1 or 0 to perform or not perform analyses
 performSynteny = 1
-performCircos = 1
+performCircos = 0
 performALLMAPS = 0
-performAltAllMaps = 0
+performAltAllMaps = 1
 
 
 # query species Name
-querySpecies = 554
+querySpecies = 581
 
 # important info for all configuration Files
-NameAnalysis = AnalyzehybridD
-writeFastaOut = 1
+NameAnalysis = AnalyzehybridS
+writeFastaOut = 0
 Loci_Threshold = 4
-pathPython = /global/u2/j/jlevy/python_modules
-pathSystem = /global/u2/j/jlevy/virtualBin
-pathALLMAPS = /global/projectb/scratch/jlevy/Synteny/BhybridumFinal/D/allMAPSAnalysis/
-BdPath = /global/projectb/scratch/jlevy/Synteny/BhybridumFinal/D/BdFiles/
-pathUnOut = /global/projectb/scratch/jlevy/Synteny/BhybridumFinal/D/UnOutFiles/
-pathGFF = /global/projectb/scratch/jlevy/Synteny/BhybridumFinal/D/GFFfiles/
-pathSort = /global/projectb/scratch/jlevy/Synteny/BhybridumFinal/D/SortFiles/
-genomePath = /global/projectb/scratch/jlevy/Synteny/BhybridumFinal/D/Genomes/
-karyotypesFilesPath = /global/projectb/scratch/jlevy/Synteny/BhybridumFinal/D/CircosInputs/Data/Karyotypes/
-circosConfigFilesPath = /global/projectb/scratch/jlevy/Synteny/BhybridumFinal/D/CircosInputs/ConfigFiles/
-LinkPath = /global/projectb/scratch/jlevy/Synteny/BhybridumFinal/D/CircosInputs/Data/Links/
-circosOutPath = /global/projectb/scratch/jlevy/Synteny/BhybridumFinal/D/CircosOutputs/
+pathPython = /global/dna/projectdirs/plant/pangenomics/python_modules
+pathSystem = /usr/common/usg/languages/python/2.7.4/bin/python
+pathALLMAPS = /global/projectb/scratch/sgordon/joshua/sean_Bd28_synteny/allMAPSAnalysis/
+BdPath = /global/projectb/scratch/sgordon/joshua/sean_Bd28_synteny/BdFiles/
+pathUnOut = /global/projectb/scratch/sgordon/joshua/sean_Bd28_synteny/UnOutFiles/
+pathGFF = /global/projectb/scratch/sgordon/joshua/sean_Bd28_synteny/GFFfiles/
+pathSort = /global/projectb/scratch/sgordon/joshua/sean_Bd28_synteny/SortFiles/
+genomePath = /global/projectb/scratch/sgordon/joshua/sean_Bd28_synteny/Genomes/
+karyotypesFilesPath = /global/projectb/scratch/sgordon/joshua/sean_Bd28_synteny/CircosInputs/Data/Karyotypes/
+circosConfigFilesPath = /global/projectb/scratch/sgordon/joshua/sean_Bd28_synteny/CircosInputs/ConfigFiles/
+LinkPath = /global/projectb/scratch/sgordon/joshua/sean_Bd28_synteny/CircosInputs/Data/Links/
+circosOutPath = /global/projectb/scratch/sgordon/joshua/sean_Bd28_synteny/CircosOutputs/
 BPsThreshold = 300000
-multipleSeqAlignFastasPath = /global/projectb/scratch/jlevy/Synteny/BhybridumFinal/D/FastaFileOutputsBdAnalysis/
+multipleSeqAlignFastasPath = /global/projectb/scratch/sgordon/joshua/sean_Bd28_synteny/FastaFileOutputsBdAnalysis/
 fastaOutputName = xxx
-allMAPImageOutputPath = /global/projectb/scratch/jlevy/Synteny/BhybridumFinal/D/allMAPSAnalysis/ALLMAPS_Chromosome_Images/
+allMAPImageOutputPath = /global/projectb/scratch/sgordon/joshua/sean_Bd28_synteny/allMAPSAnalysis/ALLMAPS_Chromosome_Images/
 online = 1
 projectName = plant-analysis.p
-nerscUsername = jlevy
+nerscUsername = sgordon
 nohup = 1
 
 Weights info (assign higher value for closer genetic relative)
