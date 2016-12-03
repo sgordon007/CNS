@@ -98,6 +98,7 @@ for file in listGenomePathFiles:
 genomeFilesText = ''.join(file for file in listGenomeFiles)
 faiFilesText = ''.join(file for file in listFaiFiles)
 
+
 # if query species, use .fa file for genome reconstruction
 for filename in listGenomeFiles:
     if querySpecies in filename:
@@ -131,17 +132,17 @@ def gff2sort2(gff, pathgff, pathsort):
 # be more versatile
 print not str(subprocess.Popen(['ls', '%s' % pathSort], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
                           .stdout.read())
+# I modified this part
+# # if no sort files present, generate them from gffs. PLEASE DELETE SORT FILES AFTER EVERY ANALYSIS
+# if not str(subprocess.Popen(['ls', '%s' % pathSort], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+#                           .stdout.read()):
 
-# if no sort files present, generate them from gffs. PLEASE DELETE SORT FILES AFTER EVERY ANALYSIS
-if not str(subprocess.Popen(['ls', '%s' % pathSort], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-                          .stdout.read()):
-
-    listGFFfiles = str(subprocess.Popen(['ls', '%s' % pathGFF], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-                       .stdout.read()).split('\n')
-    # turn gff into sort files
-    for file in listGFFfiles:
-        if file.endswith('.gff') or file.endswith('.gff3'):
-            gff2sort2(file,pathGFF,pathSort)
+listGFFfiles = str(subprocess.Popen(['ls', '%s' % pathGFF], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+                   .stdout.read()).split('\n')
+# turn gff into sort files
+for file in listGFFfiles:
+    if file.endswith('.gff') or file.endswith('.gff3'):
+        gff2sort2(file,pathGFF,pathSort)
 
 # find sort files
 listPathSort = str(subprocess.Popen(['ls', '%s' % pathSort], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
