@@ -174,6 +174,9 @@ for file in unoutList:
     # find target species then corresponding target sort files, add to list of syntenic files
     targetSpecies = file[file.find('-')+1:file.rfind('_')].replace('PAC2_0.','').replace('PAC4GC.','')
     print targetSpecies
+    ### added this
+    querySortFile = ''
+    targetSortFile = ''
     for sortFile in sortFileList:
         if querySpecies in sortFile:
             querySortFile = sortFile
