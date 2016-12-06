@@ -1,0 +1,43 @@
+# will already perform syntenyAnalysis; type 1 or 0 to perform or not perform analyses
+performSynteny = 1
+performCircos = 0
+performALLMAPS = 0
+performAltAllMaps = 1
+
+
+# query species Name
+querySpecies = 583
+
+# important info for all configuration Files
+NameAnalysis = AnalyzehybridD
+writeFastaOut = 0
+Loci_Threshold = 4
+pathPython = /global/dna/projectdirs/plant/pangenomics/python_modules
+pathSystem = /usr/common/usg/languages/python/2.7.4/bin/python
+pathALLMAPS = /global/projectb/scratch/sgordon/polyploid_analysis/accession_assemblies/BdTR6g_PNWH/chr_separated/sean_BdTR6gDgenome_synteny/allMAPSAnalysis/
+BdPath = /global/projectb/scratch/sgordon/polyploid_analysis/accession_assemblies/BdTR6g_PNWH/chr_separated/sean_BdTR6gDgenome_synteny/BdFiles/
+pathUnOut = /global/projectb/scratch/sgordon/polyploid_analysis/accession_assemblies/BdTR6g_PNWH/chr_separated/sean_BdTR6gDgenome_synteny/UnOutFiles/
+pathGFF = /global/projectb/scratch/sgordon/polyploid_analysis/accession_assemblies/BdTR6g_PNWH/chr_separated/sean_BdTR6gDgenome_synteny/GFFfiles/
+pathSort = /global/projectb/scratch/sgordon/polyploid_analysis/accession_assemblies/BdTR6g_PNWH/chr_separated/sean_BdTR6gDgenome_synteny/SortFiles/
+genomePath = /global/projectb/scratch/sgordon/polyploid_analysis/accession_assemblies/BdTR6g_PNWH/chr_separated/sean_BdTR6gDgenome_synteny/Genomes/
+karyotypesFilesPath = /global/projectb/scratch/sgordon/polyploid_analysis/accession_assemblies/BdTR6g_PNWH/chr_separated/sean_BdTR6gDgenome_synteny/CircosInputs/Data/Karyotypes/
+circosConfigFilesPath = /global/projectb/scratch/sgordon/polyploid_analysis/accession_assemblies/BdTR6g_PNWH/chr_separated/sean_BdTR6gDgenome_synteny/CircosInputs/ConfigFiles/
+LinkPath = /global/projectb/scratch/sgordon/polyploid_analysis/accession_assemblies/BdTR6g_PNWH/chr_separated/sean_BdTR6gDgenome_synteny/CircosInputs/Data/Links/
+circosOutPath = /global/projectb/scratch/sgordon/polyploid_analysis/accession_assemblies/BdTR6g_PNWH/chr_separated/sean_BdTR6gDgenome_synteny/CircosOutputs/
+BPsThreshold = 300000
+multipleSeqAlignFastasPath = /global/projectb/scratch/sgordon/polyploid_analysis/accession_assemblies/BdTR6g_PNWH/chr_separated/sean_BdTR6gDgenome_synteny/FastaFileOutputsBdAnalysis/
+fastaOutputName = FastaFileOutputsDsubgenome
+allMAPImageOutputPath = /global/projectb/scratch/sgordon/polyploid_analysis/accession_assemblies/BdTR6g_PNWH/chr_separated/sean_BdTR6gDgenome_synteny/allMAPSAnalysis/ALLMAPS_Chromosome_Images/
+online = 1
+projectName = plant-analysis.p
+nerscUsername = sgordon
+nohup = 1
+
+Weights info (assign higher value for closer genetic relative)
+314 10
+316 4
+311 1
+312 1
+313 1
+Stop
+

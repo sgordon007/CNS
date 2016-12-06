@@ -4,7 +4,9 @@
 
 #gffFiles= ['q.PAC4GC.465.gff3']#,'t.PAC2_0.167.gff3','t.PAC2_0.275.gff3','t.PAC2_0.285.gff3']
 
-gffFiles = ['q.PAC4GC.001.gff3', 'q.PAC4GC.002.gff3'] #189 311 296
+# gffFiles = ['q.PAC4GC.001.gff3', 'q.PAC4GC.002.gff3'] #189 311 296
+
+gffFiles = ['q.PAC4GC.581.gff3', 'q.PAC4GC.582.gff3', 't.PAC2_0.312.gff3', 't.PAC2_0.313.gff3', 't.PAC2_0.314.gff3', 't.PAC2_0.316.gff3', 't.PAC2_0.323.gff3'] #189 311 296
 
 # gffFiles= ['t.PAC2_0.313.gff3', 't.PAC2_0.323.gff3', 't.PAC2_0.308.gff3', 't.PAC2_0.314.gff3', 't.PAC2_0.312.gff3', 't.PAC2_0.316.gff3', 't.PAC2_0.383.gff3']  
 
